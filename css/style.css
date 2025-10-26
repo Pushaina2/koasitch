@@ -59,6 +59,16 @@ body {
   gap: 2rem;
 }
 
+/* Botón de menú para móvil (hidden en desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
 /* Social icons in navbar */
 .social-navbar {
   display: flex;
@@ -503,12 +513,39 @@ body {
     order: 1;
   }
 
+  /* Mostrar botón menu y transformar nav-items en dropdown */
+  .menu-toggle {
+    display: inline-block;
+    color: var(--dark);
+  }
+
   .nav-items {
     display: none;
+    position: absolute;
+    top: 64px; /* debajo de la navbar */
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    z-index: 999;
+  }
+
+  .navbar.nav-open .nav-items {
+    display: flex;
   }
 
   .cart-modal {
     max-width: 100%;
+  }
+
+  /* Footer social links: horizontal on mobile */
+  .social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 }
 

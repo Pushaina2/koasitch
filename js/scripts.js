@@ -62,6 +62,15 @@ function updateCartDisplay() {
 cartToggle.addEventListener("click", () => cartModal.classList.toggle("open"));
 closeCart.addEventListener("click", () => cartModal.classList.remove("open"));
 
+// Menu móvil: toggle de nav
+const menuToggle = document.getElementById('menu-toggle');
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('nav-open');
+  });
+}
+
 // Agregar producto al carrito
 document.querySelectorAll(".add-to-cart").forEach(button => {
   button.addEventListener("click", () => {
