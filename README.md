@@ -44,5 +44,6 @@ Encuentra a Koasitch en las siguientes plataformas:
 - Facebook: https://www.facebook.com/Koasitch
 - Instagram: https://www.instagram.com/koasitch
 - TikTok: https://www.tiktok.com/@koasitch
+ - WhatsApp: https://wa.me/573146035566
 
 ---
