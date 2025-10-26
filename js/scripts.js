@@ -101,15 +101,17 @@ whatsappBtn.addEventListener("click", () => {
     return;
   }
 
-  const mensaje = cart
+  // Construir mensaje legible y luego codificarlo
+  const detalle = cart
     .map((item) => `• ${item.nombre} - $${item.precio.toLocaleString()}`)
-    .join("%0A");
+    .join("\n");
 
   const total = cart.reduce((sum, item) => sum + item.precio, 0);
-  const texto = `🛍️ *Pedido MegaProm*:%0A${mensaje}%0A--------------------%0ATotal: $${total.toLocaleString()}%0A%0A👤 Quiero más información sobre estos productos.`;
+  const textoPlano = `🛍️ Pedido Koasitch:\n${detalle}\n--------------------\nTotal: $${total.toLocaleString()}\n\nHola, estoy interesado en estos productos. ¿Están disponibles?`;
 
-  const telefono = "573215508152"; // WhatsApp MegaProm
-  window.open(`https://wa.me/${telefono}?text=${texto}`, "_blank");
+  const telefono = "573146035566"; // número de Koasitch
+  const textoCodificado = encodeURIComponent(textoPlano);
+  window.open(`https://wa.me/${telefono}?text=${textoCodificado}`, "_blank");
 });
 
 // Inicializar visualmente al cargar
