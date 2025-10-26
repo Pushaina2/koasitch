@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koasitch - Moda y Estilo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1>Koasitch<span></span></h1>
+      </div>
+      <div class="nav-items">
+        <a href="#novedades" class="nav-link">Novedades</a>
+        <a href="#categorias" class="nav-link">Categorías</a>
+        <button class="cart-btn" id="cart-toggle">🛒 <span class="cart-count">0</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 💬 SECCIÓN DE BIENVENIDA -->
+  <section class="welcome">
+    <div class="container">
+      <p class="welcome-text" id="welcome-text">
+        🌸 <strong>¡Bienvenido a Koasitch!</strong> Descubre la moda que te inspira, con estilo, elegancia y precios increíbles.
+      </p>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2>Descubre tu Estilo</h2>
+        <p>Encuentra las últimas tendencias en moda y accesorios con los mejores precios. ¡Renueva tu guardarropa hoy!</p>
+        <a href="#catalogo" class="cta-button">Ver Catálogo</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Moda Koasitch Prom">
+      </div>
+    </div>
+  </header>
+
+  <!-- CATEGORÍAS -->
+  <main>
+    <section id="categorias" class="categories-section">
+      <div class="container">
+        <h2 class="section-title">Categorías Destacadas</h2>
+        <div class="categories-grid">
+          <div class="category-card"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=400&q=60"><h3>Ropa</h3></div>
+          <div class="category-card"><img src="https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?auto=format&fit=crop&w=400&q=60"><h3>Accesorios</h3></div>
+          <div class="category-card"><img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=400&q=60"><h3>Calzado</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="catalogo" class="products-section">
+      <div class="container">
+        <h2 class="section-title">Productos Destacados</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=60">
+              <div class="product-tag">Nuevo</div>
+            </div>
+            <div class="product-info">
+              <h3>Camiseta Premium</h3>
+              <p>Ropa</p>
+              <div class="product-price">
+                <span>$40.000</span>
+                <button class="add-to-cart" data-nombre="Camiseta Premium" data-precio="40000">Agregar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1534215754734-18e55d13e346?auto=format&fit=crop&w=400&q=60">
+              <div class="product-tag sale">-20%</div>
+            </div>
+            <div class="product-info">
+              <h3>Gorra Urban Style</h3>
+              <p>Accesorios</p>
+              <div class="product-price">
+                <span>$25.000</span>
+                <button class="add-to-cart" data-nombre="Gorra Urban Style" data-precio="25000">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRITO -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+        <div class="cart-header">
+          <h2>Tu Carrito</h2>
+          <button class="close-cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+          <div class="cart-total"><span>Total:</span><span id="total">$0</span></div>
+          <button id="whatsapp-btn" class="checkout-btn">Comprar por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sobre Koasitch</h3>
+          <p>Tu destino de moda favorito con las mejores ofertas y últimas tendencias.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="#novedades">Novedades</a></li>
+            <li><a href="#categorias">Categorías</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>📱 WhatsApp: +57 3146035566 </p>
+          <p>📍 Maicao, Colombia</p>
+        </div>
+      </div>
+
+      <!-- 🔒 Bloque legal -->
+      <div class="footer-bottom legal">
+        <p>&copy; 2025 Koasitch - Todos los derechos reservados.</p>
+        <p>
+          Este sitio web, su diseño, logotipo, contenidos, fotografías y estructura están protegidos por la
+          Ley 23 de 1982 y la Decisión Andina 351 de 1993 sobre derechos de autor y propiedad intelectual.
+          Queda prohibida la reproducción total o parcial sin autorización expresa del titular.
+        </p>
+        <p>Desarrollado por <strong>Koasicth</strong> | 📧 <a href="mailto:koasitchficial@gmail.com">koasitchficial@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
