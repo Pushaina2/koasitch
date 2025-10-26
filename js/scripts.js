@@ -71,6 +71,25 @@ if (menuToggle) {
   });
 }
 
+// Cerrar menú con botón interno y al pulsar un enlace del menú (útil en móvil)
+const menuClose = document.getElementById('menu-close');
+if (menuClose) {
+  menuClose.addEventListener('click', () => {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.remove('nav-open');
+  });
+}
+
+// Cerrar menú cuando se hace clic en cualquier enlace de navegación (mejora UX móvil)
+document.querySelectorAll('.nav-items .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar.classList.contains('nav-open')) {
+      navbar.classList.remove('nav-open');
+    }
+  });
+});
+
 // Agregar producto al carrito
 document.querySelectorAll(".add-to-cart").forEach(button => {
   button.addEventListener("click", () => {
