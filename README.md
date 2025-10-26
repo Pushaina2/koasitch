@@ -33,3 +33,16 @@ El proyecto está desarrollado con **HTML, CSS y JavaScript**, ofreciendo una ex
 
    ```bash
    git clone https://github.com/Pushaina2/koasitch.git
+
+---
+
+## 📱 Redes sociales
+
+Encuentra a Koasitch en las siguientes plataformas:
+
+- X (antes Twitter): https://x.com/Koasitch
+- Facebook: https://www.facebook.com/Koasitch
+- Instagram: https://www.instagram.com/koasitch
+- TikTok: https://www.tiktok.com/@koasitch
+
+---
